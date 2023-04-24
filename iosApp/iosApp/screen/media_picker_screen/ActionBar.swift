@@ -14,11 +14,12 @@ struct ActionBar: View {
     private(set) var textOption: String = ""
     private(set) var onBackPressed: () -> Void
     private(set) var onOptionTextPressed: () -> Void = {}
+    private(set) var iconBack: String = "ic_arrow_back"
     
     var body: some View {
         GeometryReader { geo in
             HStack (alignment: .center) {
-                Image("ic_arrow_back")
+                Image(iconBack)
                     .resizable()
                     .scaledToFit()
                     .font(.headline)

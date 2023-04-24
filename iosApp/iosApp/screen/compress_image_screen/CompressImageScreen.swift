@@ -12,6 +12,7 @@ import Photos
 
 struct CompressImageScreen: View {
     
+    @Binding var isRootActive: Bool
     private (set) var sourceImageModel: ImageInfoModel
     @ObservedObject private var viewModel: CompressImageViewModel = CompressImageViewModel()
     
@@ -21,6 +22,19 @@ struct CompressImageScreen: View {
     
     var body: some View {
         VStack {
+            if let originImage = viewModel.compressedResult?.originImage, let compressedImage = viewModel.compressedResult?.compressedImage {
+                NavigationLink(destination: ReviewCompressedImageScreen(
+                    isRootActive: $isRootActive,
+                    originImage: originImage,
+                    compressedImage: compressedImage
+                ), isActive: $viewModel.openCompareScreen
+                ) {
+                    EmptyView()
+                }
+                .navigationBarBackButtonHidden(true)
+                .hidden()
+            }
+            
             ActionBar(
                 title: "Nén ảnh",
                 textOption: "Compress",

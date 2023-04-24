@@ -11,7 +11,10 @@ import SwiftUI
 
 
 struct CompressingDialog: View {
-   @State var isSuccessful = false
+    
+    
+    var isSuccessful = false
+    
     var body: some View {
         VStack {
           Text("In Compressing")
@@ -21,12 +24,11 @@ struct CompressingDialog: View {
             
             if isSuccessful {
                 LottieView(lottieFile: "lottie_success")
-                    .loop(loop: true)
                     .frame(width: 150, height: 150)
             }
             else {
                 LottieView(lottieFile: "lottie_image_swap")
-                    .loop(loop: false)
+                    .loop(loop: true)
                     .frame(width: 150, height: 150)
             }
             

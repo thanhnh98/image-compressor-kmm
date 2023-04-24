@@ -12,14 +12,15 @@ import Foundation
 struct HomeScreen: View {
     
     @ObservedObject private(set) var viewModel: ViewModel
-    @State private var activeShowwNote = false
+    @State private var isActive = false
     
     var body: some View {
         VStack(alignment: .leading) {
             
-            NavigationLink(destination: MediaPickerScreen(), isActive: $activeShowwNote) {
+            NavigationLink(destination: MediaPickerScreen(isRootActive: $isActive), isActive: $isActive) {
                 EmptyView()
             }
+            .isDetailLink(false)
             .navigationBarBackButtonHidden(true)
             .hidden()
             
@@ -70,7 +71,7 @@ struct HomeScreen: View {
                 .frame(maxWidth: .infinity, minHeight: 140)
                 .padding(.trailing, 8)
                 .onTapGesture {
-                    activeShowwNote = true
+                    isActive = true
     //                NavigationLink(destination: DetailView(item: "Item 1"))
                 }
 

@@ -13,6 +13,7 @@ import Photos
 struct MediaPickerScreen: View {
     
     @Environment(\.presentationMode) var presentationMode
+    @Binding var isRootActive: Bool
     @State var isShowPicker: Bool = false
     @State var uiImage: UIImage? = nil
     @State var imageInfoModel: ImageInfoModel? = nil
@@ -22,7 +23,7 @@ struct MediaPickerScreen: View {
         VStack {
             if let imageInfo = imageInfoModel {
                 NavigationLink(
-                    destination: CompressImageScreen(sourceImageModel: imageInfo), isActive: $showCompressImageScreen){
+                    destination: CompressImageScreen(isRootActive: $isRootActive, sourceImageModel: imageInfo), isActive: $showCompressImageScreen){
                         EmptyView()
                     }
                     .hidden()

@@ -27,6 +27,8 @@
 		05B8C71929F1244300CC8249 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 05B8C71829F1244300CC8249 /* Lottie */; };
 		05B8C71B29F1256500CC8249 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B8C71A29F1256500CC8249 /* LottieView.swift */; };
 		05B8C71D29F22A7600CC8249 /* CompressingDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B8C71C29F22A7600CC8249 /* CompressingDialog.swift */; };
+		05B8C72229F4DBB000CC8249 /* ResultCompressImageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B8C72129F4DBB000CC8249 /* ResultCompressImageScreen.swift */; };
+		05B8C72529F4E71900CC8249 /* CompareImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B8C72429F4E71900CC8249 /* CompareImages.swift */; };
 		05CF6C3229E519D200CE8E9A /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CF6C3129E519D200CE8E9A /* HomeScreen.swift */; };
 		05CF6C3529E5239200CE8E9A /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CF6C3429E5239200CE8E9A /* ViewExtension.swift */; };
 		05CF6C3729E530C500CE8E9A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CF6C3629E530C400CE8E9A /* Colors.swift */; };
@@ -57,6 +59,8 @@
 		05B8C71529F11C0800CC8249 /* CommonDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CommonDialog.swift; path = iosApp/screen/compress_image_screen/CommonDialog.swift; sourceTree = SOURCE_ROOT; };
 		05B8C71A29F1256500CC8249 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LottieView.swift; path = iosApp/screen/compress_image_screen/LottieView.swift; sourceTree = SOURCE_ROOT; };
 		05B8C71C29F22A7600CC8249 /* CompressingDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressingDialog.swift; sourceTree = "<group>"; };
+		05B8C72129F4DBB000CC8249 /* ResultCompressImageScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCompressImageScreen.swift; sourceTree = "<group>"; };
+		05B8C72429F4E71900CC8249 /* CompareImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareImages.swift; sourceTree = "<group>"; };
 		05CF6C3129E519D200CE8E9A /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		05CF6C3429E5239200CE8E9A /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewExtension.swift; path = iosApp/extensions/ViewExtension.swift; sourceTree = SOURCE_ROOT; };
 		05CF6C3629E530C400CE8E9A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = iosApp/extensions/Colors.swift; sourceTree = SOURCE_ROOT; };
@@ -151,9 +155,27 @@
 			path = components;
 			sourceTree = "<group>";
 		};
+		05B8C72029F4DB8F00CC8249 /* result_compress_screen */ = {
+			isa = PBXGroup;
+			children = (
+				05B8C72329F4E70800CC8249 /* components */,
+				05B8C72129F4DBB000CC8249 /* ResultCompressImageScreen.swift */,
+			);
+			path = result_compress_screen;
+			sourceTree = "<group>";
+		};
+		05B8C72329F4E70800CC8249 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				05B8C72429F4E71900CC8249 /* CompareImages.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		05CF6C2F29E5199800CE8E9A /* screen */ = {
 			isa = PBXGroup;
 			children = (
+				05B8C72029F4DB8F00CC8249 /* result_compress_screen */,
 				05B8C70B29EF8EEE00CC8249 /* compress_image_screen */,
 				058BA79129EBCCEC00822D4D /* media_picker_screen */,
 				05CF6C3029E519AC00CE8E9A /* home_screen */,
@@ -380,8 +402,10 @@
 				05B8C71429F10E2700CC8249 /* CompressImageViewModel.swift in Sources */,
 				05CF6C3229E519D200CE8E9A /* HomeScreen.swift in Sources */,
 				058BA79629EBCE0400822D4D /* ActionBar.swift in Sources */,
+				05B8C72529F4E71900CC8249 /* CompareImages.swift in Sources */,
 				058BA79329EBCD3700822D4D /* MediaPickerScreen.swift in Sources */,
 				05CF6C3929E531DF00CE8E9A /* ColorsExtension.swift in Sources */,
+				05B8C72229F4DBB000CC8249 /* ResultCompressImageScreen.swift in Sources */,
 				05B8C71B29F1256500CC8249 /* LottieView.swift in Sources */,
 				05B8C71629F11C0800CC8249 /* CommonDialog.swift in Sources */,
 				058BA7A429ED1A5600822D4D /* ImageInfoModel.swift in Sources */,
